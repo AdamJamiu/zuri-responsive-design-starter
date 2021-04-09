@@ -6,12 +6,15 @@
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
 }
-
+body{
+    margin: 0;
+    padding: 0;
+}
 div.nav-bar {
     display: flex;
     justify-content: space-between;
     padding: 1rem 6rem;
-    width: 100vw;
+    width: 100%;
     background: #304353;
 }
 
@@ -44,9 +47,39 @@ ul li a:hover {
     padding: 0.5rem;
 }
 
+@media only screen and (max-width: 750px){
+    ul.nav-links{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        background-color: cyan;
+        left: 0;
+        width: 300px;
+        height: 100vh;
+        top: 0;
+        transition: .3s ease-in-out;
+        z-index: 9;
+        position: fixed;
+        /*transform: translateX(-300px);*/
+    }
+}
+
+.bx-menu{
+    color:#bcc3c7;
+    width: 50px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    visibility: hidde;
+
+}
+
 div.hero-section {
     background: #304353;
     padding: 10rem;
+    width: 100%;
 }
 
 div.hero-content-heading {
@@ -89,10 +122,14 @@ div.hero-content-btn a {
 
 div.hero-background {
     background: #f0f0f0;
-    padding: 10rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 div.background {
@@ -156,11 +193,14 @@ div.snapshot-box {
     align-items: center;
     background: #f0f0f0;
     padding: 4rem 6rem;
+    
 }
 
 div.snapshot-box-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 div.box1 {
