@@ -6,6 +6,10 @@
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
 }
+html{
+    padding: 0;
+    margin: 0;
+}
 body{
     margin: 0;
     padding: 0;
@@ -47,6 +51,10 @@ ul li a:hover {
     padding: 0.5rem;
 }
 
+.toggler{
+    transform: translateX(-300px);
+}
+
 @media only screen and (max-width: 750px){
     ul.nav-links{
         display: flex;
@@ -62,19 +70,28 @@ ul li a:hover {
         transition: .3s ease-in-out;
         z-index: 9;
         position: fixed;
-        /*transform: translateX(-300px);*/
+        
+    }
+
+   .bx .bx-menu{
+        display: block;
+    }
+
+    .bx-menu{
+        color:#bcc3c7;
+        width: 50px;
+        text-align: center;
+        font-size: 30px;
+        cursor: pointer;
+    
     }
 }
 
-.bx-menu{
-    color:#bcc3c7;
-    width: 50px;
-    text-align: center;
-    font-size: 25px;
-    cursor: pointer;
-    visibility: hidde;
+.bx .bx-menu{
+   display: none;
 
 }
+
 
 div.hero-section {
     background: #304353;
